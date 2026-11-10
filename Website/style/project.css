@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap');
+
+:root {
+    color-scheme: light;
+    --ink: #172c32;
+    --muted: #586a6b;
+    --paper: #f7f8f5;
+    --white: #fff;
+    --green: #267b68;
+    --green-dark: #1e6255;
+    --lime: #d8edaa;
+    --line: #e2e9e2;
+    font-family: 'DM Sans', 'Segoe UI', sans-serif;
+    color: var(--ink);
+    background: var(--paper);
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    min-width: 320px;
+    margin: 0;
+}
+
+a {
+    color: inherit;
+}
+
+input[type="text"],
+textarea {
+  width: 100%;
+  padding: 12px 16px;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
+  font-family: inherit;
+  box-sizing: border-box;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.hero {
+    display: grid;
+    grid-template-columns: 1.03fr 0.97fr;
+    align-items: center;
+    gap: 56px;
+    width: min(1200px, calc(100% - 64px));
+    min-height: 590px;
+    margin: 0 auto;
+    padding: 68px 0 76px;
+}
+
+.starterText span {
+    color: #267b68;
+}
+
+.starterText p {
+    color: #586a6b;
+}
+
+.starterText hr {
+    color: #267b68;
+    opacity: 40%;
+}
+
+.workText h2 {
+    margin: 0 0 14px;
+    font-size: clamp(30px, 3.4vw, 42px);
+    font-weight: 600;
+    line-height: 1.2;
+    letter-spacing: -1.8px;
+}
+
+.workText span {
+    color: #267b68;
+}
+
+.exampleImage {
+    margin: 0;
+    border-radius: 16px;
+}
+
+footer {
+    background-color: var(--green);
+    color: var(--white);
+    padding: 0px, 0px 14px;
+    font-family: 'Manrope', 'Segoe UI', sans-serif;
+    margin: 0 auto;
+    width: 100%;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 700;
+}
