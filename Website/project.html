@@ -1,33 +1,149 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style\project.css">
-    <title>Demonstração</title>
+    <meta name="theme-color" content="#f7f8f5">
+    <meta name="description" content="Demonstração do Comunicador Talking Hands — escreva, ajuste e vocalize frases com facilidade e acessibilidade.">
+    <!-- Open Graph / Redes Sociais -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Demonstração — Talking Hands">
+    <meta property="og:description" content="Teste em tempo real o comunicador acessível com síntese de voz e atalhos rápidos.">
+    <meta property="og:image" content="assets/Gemini_Generated_Image_npv0zrnpv0zrnpv0.jpeg">
+    <link rel="stylesheet" href="style/project.css">
+    <link rel="icon" type="image/jpeg" href="assets/Gemini_Generated_Image_npv0zrnpv0zrnpv0.jpeg">
+    <title>Demonstração — Talking Hands</title>
 </head>
 <body>
-    <main class="hero">
-        <div class="starterText">
-            <hr>
-            <h1>Escreva oque <span>deseja falar!</span></h1>
-            <p>Deixe o resto com o nosso sistema.</p>
-            <hr>
-        </div>
-        <input type="text" id="phrase" name="phrase" placeholder="Digite aqui.">
+    <header class="site-header">
+        <a class="brand" href="index.html" aria-label="Talking Hands, ir para página inicial">
+            <img src="assets/Gemini_Generated_Image_npv0zrnpv0zrnpv0.jpeg" alt="" class="brand-logo" width="38" height="38">
+            <span>Talking<span class="brand-accent">Hands</span></span>
+        </a>
+        <nav aria-label="Navegação do sistema">
+            <a class="nav-link" href="index.html">← Voltar ao início</a>
+            <span class="demo-badge"><span class="badge-dot" aria-hidden="true"></span> Demonstração Ativa</span>
+            <a class="nav-cta" href="https://github.com/Raafakkj/Talking-Hands-Project" target="_blank" rel="noopener noreferrer">
+                GitHub <span aria-hidden="true">↗</span>
+            </a>
+        </nav>
+    </header>
+
+    <main class="main-layout">
+        <!-- SEÇÃO PRINCIPAL DE COMUNICAÇÃO (DEMONSTRAÇÃO) -->
+        <section class="demo-hero" aria-labelledby="demo-heading">
+            <div class="demo-intro">
+                <p class="eyebrow">
+                    <span class="eyebrow-dot" aria-hidden="true"></span>
+                    Comunicador em Tempo Real
+                </p>
+                <h1 id="demo-heading">O que você <span>quer falar?</span></h1>
+                <p class="demo-description">
+                    Digite sua frase ou selecione uma mensagem rápida. O sistema analisa o texto e reproduz a fala com síntese de voz clara.
+                </p>
+            </div>
+
+            <div class="communicator-card">
+                <form id="speak-form" class="speak-form">
+                    <div class="input-header">
+                        <label for="phrase" class="input-label">Mensagem para vocalizar</label>
+                        <span class="char-count" id="char-count" aria-live="polite">0 caracteres</span>
+                    </div>
+
+                    <div class="input-wrapper">
+                        <textarea 
+                            id="phrase" 
+                            name="phrase" 
+                            rows="3" 
+                            placeholder="Exemplo: Olá! Preciso de ajuda com a minha cadeira..."
+                            autocomplete="off"
+                            spellcheck="true"
+                            required
+                        ></textarea>
+                    </div>
+
+                    <!-- Frases de atalho rápido (essencial em CAA / Tecnologias Assistivas) -->
+                    <div class="quick-chips-wrapper">
+                        <span class="chips-label">Sugestões rápidas:</span>
+                        <div class="quick-chips" role="group" aria-label="Frases de resposta rápida">
+                            <button type="button" class="chip-btn" data-text="Olá, bom dia!">Olá, bom dia!</button>
+                            <button type="button" class="chip-btn" data-text="Preciso de ajuda, por favor.">Preciso de ajuda</button>
+                            <button type="button" class="chip-btn" data-text="Muito obrigado!">Muito obrigado</button>
+                            <button type="button" class="chip-btn" data-text="Gostaria de tomar um pouco de água.">Quero água</button>
+                            <button type="button" class="chip-btn" data-text="Sim, tudo bem.">Sim</button>
+                            <button type="button" class="chip-btn" data-text="Não, obrigado.">Não</button>
+                        </div>
+                    </div>
+
+                    <div class="form-actions">
+                        <button type="submit" id="btn-speak" class="button button-primary">
+                            <span>Vocalizar frase</span>
+                            <span class="btn-icon" aria-hidden="true">🔊</span>
+                        </button>
+                        <button type="button" id="btn-clear" class="button button-ghost">
+                            <span>Limpar</span>
+                        </button>
+                    </div>
+
+                    <!-- Região de acessibilidade para anúncios de status -->
+                    <div id="status-feedback" class="status-feedback" role="status" aria-live="polite">
+                        Pronto para falar. Digite ou clique em uma sugestão.
+                    </div>
+                </form>
+            </div>
+        </section>
+
+        <!-- SEÇÃO EXPLICATIVA: COMO O SISTEMA FUNCIONA -->
+        <section class="how-it-works" aria-labelledby="works-heading">
+            <div class="works-content">
+                <div class="works-label"><span>02</span> / ARQUITETURA E FUNCIONAMENTO</div>
+                <h2 id="works-heading">Como o sistema <span>processa a sua voz?</span></h2>
+                <p>
+                    O Talking Hands integra processamento de linguagem natural e síntese de áudio para tornar o ato de se comunicar mais fluido e acessível para todos.
+                </p>
+
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon" aria-hidden="true">✍️</div>
+                        <h3>Auto-correção Inteligente</h3>
+                        <p>Analisa termos digitados mesmo com digitação truncada ou rápida, restaurando o sentido original da frase.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon" aria-hidden="true">🗣️</div>
+                        <h3>Síntese de Voz Natural</h3>
+                        <p>Transforma o texto em áudio vocalizado imediato, permitindo comunicação audível no ambiente presencial.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon" aria-hidden="true">♿</div>
+                        <h3>Design Acessível</h3>
+                        <p>Totalmente navegável via teclado, botões de alto contraste e compatibilidade com leitores de tela.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="works-visual">
+                <div class="visual-glow" aria-hidden="true"></div>
+                <img 
+                    src="assets/gettyimages-1180037246-612x612.jpg" 
+                    alt="Pessoa utilizando tecnologia assistiva e comunicador acessível com auxílio das mãos" 
+                    class="exampleImage"
+                >
+                <div class="visual-badge">
+                    <span aria-hidden="true">✳</span> Tecnologia assistiva aberta
+                </div>
+            </div>
+        </section>
     </main>
 
-    <main class="hero">
-        <main class="workText">
-            <h2><span>Como ele funciona?</span></h2>
-            <p>* Um modelo LLM lê cada frase que você digitou, deixando todo o trabalho apenas para ele. Integrado com um sistema de <span>auto-correção</span>, cada palavra que você digitar será analisada e filtrada para o melhor entendimento do próximo.</p>
-        </main>
-        <img src="assets\gettyimages-1180037246-612x612.jpg" alt="example image" class="exampleImage">
-    </main>
-
-
-    <footer class="footer">
-        <p>teste</p> 
+    <footer class="site-footer">
+        <a class="footer-brand" href="index.html">
+            <img src="assets/Gemini_Generated_Image_npv0zrnpv0zrnpv0.jpeg" alt="" class="footer-logo" width="28" height="28">
+            <span>Talking<span>Hands</span></span>
+        </a>
+        <p>© 2026 Talking Hands. Projeto open-source feito pela comunidade.</p>
+        <a href="https://github.com/Raafakkj/Talking-Hands-Project" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
     </footer>
+
+    <script src="js/project.js" defer></script>
 </body>
 </html>
