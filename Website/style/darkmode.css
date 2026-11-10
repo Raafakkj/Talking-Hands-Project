@@ -1,0 +1,258 @@
+/* ==========================================================================
+   DARK MODE — Talking Hands (Preto Plano / Flat Black)
+   Sem degradês: fundo preto absoluto (#000), superfícies sólidas (#0d0d0d),
+   linhas sutis (#1f1f1f) e alto contraste para leitura acessível.
+   ========================================================================== */
+
+/* ---------- PALETA PRETO PLANO (FLAT BLACK) ---------- */
+[data-theme="dark"] {
+    color-scheme: dark;
+    --paper: #000000;
+    --card-bg: #0d0d0d;
+    --ink: #f3f4f6;
+    --muted: #8e9594;
+    --white: #ffffff;
+    --green: #2fa98b;
+    --green-dark: #3dd6b0;
+    --lime: #16241c;
+    --accent-orange: #e59053;
+    --line: #1c1c1c;
+    --border-soft: #292929;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+        color-scheme: dark;
+        --paper: #000000;
+        --card-bg: #0d0d0d;
+        --ink: #f3f4f6;
+        --muted: #8e9594;
+        --white: #ffffff;
+        --green: #2fa98b;
+        --green-dark: #3dd6b0;
+        --lime: #16241c;
+        --accent-orange: #e59053;
+        --line: #1c1c1c;
+        --border-soft: #292929;
+    }
+}
+
+/* ---------- COMPONENTES EM PRETO PLANO (SEM DEGRADÊS) ---------- */
+
+/* Header e Navegação */
+[data-theme="dark"] .nav-cta,
+:root:not([data-theme="light"]) .nav-cta {
+    background: #080808;
+    border-color: var(--border-soft);
+    color: var(--ink);
+}
+
+[data-theme="dark"] .nav-cta:hover,
+:root:not([data-theme="light"]) .nav-cta:hover {
+    background: #141414;
+    border-color: var(--green);
+    color: var(--green-dark);
+}
+
+/* Eyebrow Dot */
+[data-theme="dark"] .eyebrow-dot,
+:root:not([data-theme="light"]) .eyebrow-dot {
+    background: var(--accent-orange);
+    box-shadow: 0 0 0 4px #26170d;
+}
+
+/* Molduras Visuais — Fundo plano #0a0a0a e sem degradê */
+[data-theme="dark"] .hero-visual,
+:root:not([data-theme="light"]) .hero-visual,
+[data-theme="dark"] .works-visual,
+:root:not([data-theme="light"]) .works-visual {
+    background: #0a0a0a;
+    border-color: var(--line);
+}
+
+/* Remove brilhos / glows embaçados para manter o estilo minimalista e plano */
+[data-theme="dark"] .visual-glow,
+:root:not([data-theme="light"]) .visual-glow {
+    display: none;
+}
+
+/* Legenda da imagem */
+[data-theme="dark"] .visual-caption,
+:root:not([data-theme="light"]) .visual-caption {
+    color: var(--muted);
+}
+
+/* Selo de carimbo (index) */
+[data-theme="dark"] .about-stamp,
+:root:not([data-theme="light"]) .about-stamp {
+    border-color: var(--line);
+    color: var(--green-dark);
+}
+
+/* Rodapé */
+[data-theme="dark"] .site-footer,
+:root:not([data-theme="light"]) .site-footer {
+    border-top-color: var(--line);
+    color: var(--muted);
+}
+
+/* Card do Comunicador (project.html) — Preto plano */
+[data-theme="dark"] .communicator-card,
+:root:not([data-theme="light"]) .communicator-card {
+    background: #0d0d0d;
+    border-color: var(--line);
+    box-shadow: 0 0 0 1px var(--line);
+}
+
+/* Campo de Texto (textarea) */
+[data-theme="dark"] .input-wrapper textarea,
+:root:not([data-theme="light"]) .input-wrapper textarea {
+    background: #000000;
+    border-color: var(--border-soft);
+    color: #ffffff;
+}
+
+[data-theme="dark"] .input-wrapper textarea:focus,
+:root:not([data-theme="light"]) .input-wrapper textarea:focus {
+    background: #000000;
+    border-color: var(--green);
+    box-shadow: 0 0 0 3px rgba(47, 169, 139, 0.25);
+}
+
+/* Chips / Sugestões rápidas */
+[data-theme="dark"] .chip-btn,
+:root:not([data-theme="light"]) .chip-btn {
+    background: #0d0d0d;
+    border-color: var(--border-soft);
+    color: var(--ink);
+}
+
+[data-theme="dark"] .chip-btn:hover,
+:root:not([data-theme="light"]) .chip-btn:hover {
+    background: #142019;
+    border-color: var(--green);
+    color: var(--green-dark);
+}
+
+/* Botão Limpar (Ghost) */
+[data-theme="dark"] .button-ghost,
+:root:not([data-theme="light"]) .button-ghost {
+    background: #000000;
+    border-color: var(--border-soft);
+    color: var(--muted);
+}
+
+[data-theme="dark"] .button-ghost:hover,
+:root:not([data-theme="light"]) .button-ghost:hover {
+    background: #141414;
+    border-color: #404040;
+    color: #ffffff;
+}
+
+/* Feedback de Status */
+[data-theme="dark"] .status-feedback,
+:root:not([data-theme="light"]) .status-feedback {
+    background: #0b1411;
+    border-left: 4px solid var(--green);
+    color: var(--green-dark);
+}
+
+/* Badge de Demonstração Ativa */
+[data-theme="dark"] .demo-badge,
+:root:not([data-theme="light"]) .demo-badge {
+    background: #0b1411;
+    border-color: #1a2c24;
+    color: var(--green-dark);
+}
+
+/* Cards da seção 'Como funciona' */
+[data-theme="dark"] .feature-card,
+:root:not([data-theme="light"]) .feature-card {
+    background: #080808;
+    border-color: var(--line);
+}
+
+[data-theme="dark"] .feature-card:hover,
+:root:not([data-theme="light"]) .feature-card:hover {
+    border-color: #2b3d35;
+    background: #0d0d0d;
+}
+
+/* Badge da imagem */
+[data-theme="dark"] .visual-badge,
+:root:not([data-theme="light"]) .visual-badge {
+    background: #0a0a0a;
+    border-color: var(--line);
+    color: var(--ink);
+}
+
+/* Ajuste na sombra da imagem */
+[data-theme="dark"] .exampleImage,
+:root:not([data-theme="light"]) .exampleImage {
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.6);
+}
+
+/* ==========================================================================
+   BOTÃO TOGGLE DE TEMA (FLAT)
+   ========================================================================== */
+
+.theme-toggle {
+    appearance: none;
+    border: 1px solid var(--border-soft);
+    background: var(--card-bg);
+    color: var(--ink);
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: grid;
+    place-items: center;
+    font-size: 17px;
+    line-height: 1;
+    transition: background-color 160ms ease, border-color 160ms ease, transform 160ms ease;
+    padding: 0;
+    flex-shrink: 0;
+}
+
+.theme-toggle:hover {
+    border-color: var(--green);
+    background: #edf4ee;
+    transform: scale(1.06);
+}
+
+[data-theme="dark"] .theme-toggle,
+:root:not([data-theme="light"]) .theme-toggle {
+    background: #0d0d0d;
+    border-color: var(--border-soft);
+    color: var(--ink);
+}
+
+[data-theme="dark"] .theme-toggle:hover,
+:root:not([data-theme="light"]) .theme-toggle:hover {
+    background: #171717;
+    border-color: var(--green);
+}
+
+/* Ícones do Toggle */
+.theme-toggle .icon-sun {
+    display: none;
+}
+.theme-toggle .icon-moon {
+    display: inline;
+}
+
+[data-theme="dark"] .theme-toggle .icon-sun {
+    display: inline;
+}
+[data-theme="dark"] .theme-toggle .icon-moon {
+    display: none;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) .theme-toggle .icon-sun {
+        display: inline;
+    }
+    :root:not([data-theme="light"]) .theme-toggle .icon-moon {
+        display: none;
+    }
+}
