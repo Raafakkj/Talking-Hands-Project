@@ -11,7 +11,7 @@ root = tk.Tk()
 root.title("Central App")
 root.geometry("800x600")
 engine = pyttsx3.init()
-engine.setProperty('volume', 5.0)
+engine.setProperty('volume', 1.0)
 
 user_input = ""
 voices = engine.getProperty('voices')
@@ -26,6 +26,9 @@ config_image = PhotoImage(file=image_path)
 def entry_reader():
     global user_input
     user_input = entry.get()
+    if not user_input.strip():
+        return
+
     engine.say(user_input)
     engine.runAndWait()
 
