@@ -1,0 +1,2 @@
+pyttsx3>=2.99
+tkinter>=8.6.12
