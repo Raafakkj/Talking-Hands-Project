@@ -116,3 +116,7 @@ O **Talking Hands** é construído a muitas mãos. Se você programa, entende de
 4. Envie para a branch (`git push origin feature/nova-ideia`).
 
 5. Abra um **Pull Request** e conte para nós o que você melhorou!
+
+---
+
+**P.S. sobre o nosso processo de desenvolvimento:** Para acelerar a construção do código, estruturar melhor a arquitetura e elevar a qualidade do produto final, este projeto também contou com o apoio de **Inteligência Artificial generativa** como ferramenta de suporte à programação. Acreditamos que usar a tecnologia a nosso favor torna o desenvolvimento mais ágil e eficiente — permitindo que a gente foque ainda mais no que realmente importa: a acessibilidade e o impacto social do Talking Hands.
