@@ -431,20 +431,23 @@ h2 {
     color: #d58a51;
     font-size: 19px;
 }
-
+    
 .site-footer {
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
     align-items: center;
-    justify-content: space-between;
     gap: 20px;
+    width: min(1200px, calc(100% - 64px));
     min-height: 84px;
-    padding: 16px max(32px, calc((100vw - 1200px) / 2));
+    margin: 0 auto;
+    padding: 16px 0;
     border-top: 1px solid var(--line);
     color: #75827e;
     font-size: 11px;
 }
 
 .footer-brand {
+    justify-self: start;
     color: var(--ink);
     font-size: 14px;
 }
@@ -455,7 +458,19 @@ h2 {
 }
 
 .site-footer > a:last-child {
+    justify-self: end;
     font-weight: 700;
+}
+
+.reveal {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.reveal.visivel {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 a:focus-visible {
