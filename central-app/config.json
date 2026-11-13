@@ -1,6 +1,6 @@
 {
-    "voice": "Microsoft Maria Desktop - Portuguese(Brazil)",
-    "voice_id": "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Speech\\Voices\\Tokens\\TTS_MS_PT-BR_MARIA_11.0",
-    "rate": 276,
-    "volume": 5.3
+    "voice": "Portuguese (Brazil)",
+    "voice_id": "roa/pt-br",
+    "rate": 50,
+    "volume": 1.0
 }
